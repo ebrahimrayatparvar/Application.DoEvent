@@ -16,5 +16,16 @@ namespace DoEvent
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 30000; i++)
+            {
+                textBox1.Text = i.ToString();
+                Application.DoEvents();
+                i += 10;
+                textBox1.Text = i.ToString();
+            }
+        }
     }
 }
